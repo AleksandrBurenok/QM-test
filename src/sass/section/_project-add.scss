@@ -1,0 +1,133 @@
+.project {
+  &__add {
+    padding: 53px 0;
+
+    &-container {
+      background-color: #fff;
+    }
+
+    &-wrap {
+      max-width: 776px;
+      padding: 28px 31px 49px;
+    }
+
+    &-title {
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+
+  &__form {
+    &-all__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+
+    &-wrap {
+      flex-basis: 50%;
+      margin-right: 45px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-field {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover &__label {
+        color: #000000;
+      }
+
+      &__label {
+        display: block;
+        font-size: 14px;
+        line-height: 12px;
+        color: #6d6e71;
+        margin-bottom: 6px;
+
+        &__red {
+          color: red;
+        }
+      }
+
+      &__input {
+        border: none;
+        border-bottom: 2px solid #dbdcdd;
+        outline: 0;
+        font-size: 14px;
+        padding-bottom: 6px;
+        width: 100%;
+
+        &:hover {
+          border-color: #c1c1c1;
+        }
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      padding-top: 40px;
+    }
+
+    &-btn__cancel {
+      background-color: #ffffff;
+      border: 2px solid #576b87;
+      text-transform: uppercase;
+      color: #576b87;
+      border-radius: 3px;
+      font-size: 15px;
+      @include bold;
+      padding: 13px 26px 11px 34px;
+      letter-spacing: 1.75px;
+      margin-right: 18px;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: #4c6b89;
+        border-color: #4c6b89;
+        color: #ffffff;
+      }
+
+      &:active {
+        background-color: #112a42;
+        border-color: #112a42;
+        color: #ffffff;
+      }
+    }
+
+    &-btn__add {
+      background-color: #faed4c;
+      border: 2px solid #faed4c;
+      text-transform: uppercase;
+      color: #253244;
+      border-radius: 3px;
+      font-size: 15px;
+      @include bold;
+      padding: 13px 31px 11px 34px;
+      letter-spacing: 1.75px;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: #f1e76e;
+        border-color: #f1e76e;
+        color: #ffffff;
+      }
+
+      &:active {
+        background-color: #c1c1be;
+        border-color: #c1c1be;
+        color: #ffffff;
+      }
+    }
+  }
+}
