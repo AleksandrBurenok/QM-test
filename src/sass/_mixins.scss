@@ -1,0 +1,82 @@
+@mixin regular {
+  font-family: 'Proxima Nova Regular', sans-serif;
+}
+  
+@mixin bold {
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+  
+@mixin lightit {
+  font-family: 'Proxima Nova Light Italic', sans-serif;
+}
+
+@mixin css-checkbox(
+        $size: '24px',
+        $selectedColor: #d11515,
+        $checkColor: #FFF,
+        $valign: 'middle'
+    ) {
+	display: none;
+
+	&:checked + i {
+		background: #{$selectedColor};
+		border-color: #{$selectedColor};
+
+		&:hover {
+      border-color: #c1c1be;
+      &:after { 
+        opacity: 1;
+      }
+    }
+
+		&:after {
+			opacity: 1;
+      border-color: #{$checkColor};
+		}
+	}
+
+  + i {
+    box-sizing: border-box;
+    &:before, &:after {
+       box-sizing: border-box;
+    }
+  }
+	+ i {
+		position: relative;
+		display: inline-block;
+		width: #{$size};
+		height: #{$size};
+		margin: 0;
+    vertical-align: #{$valign};
+    border: 1px solid #bbbdbf;
+    border-radius: 2px;
+    transition: background 200ms ease;   
+		background: #ffffff;
+		font-size: #{$size};
+		cursor: pointer;
+
+    &:hover {
+      background-color: #c1c1be;
+      &:after {
+        opacity: 0;
+      }
+    }
+      
+
+		&:after {
+			content: '';
+			opacity: 0;
+			transform: translateZ(1px) rotate(-45deg);
+      outline: 1px solid transparent;
+			position: absolute;
+			top: 22%;
+			left: 15%;
+			width: .68em;
+			height: .4em;
+			border: .15em solid #222;
+			border-top: none;
+			border-right: none;
+			background: rgba(0, 0, 0, 0);
+		}
+	}
+}

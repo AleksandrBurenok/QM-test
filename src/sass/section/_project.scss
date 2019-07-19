@@ -1,0 +1,146 @@
+.project {
+  text-align: center;
+  padding: 51px 0 15px;
+
+  &__table {
+    margin: 40px 0;
+
+    &-line {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 45px;
+      padding: 0 14px;
+      margin-bottom: 5px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .sorted {
+    color: #6d6e71;
+  }
+
+  .sort {
+    &__active {
+      box-shadow: 0px 6px 16px 0px rgba(51, 51, 51, 0.07);
+      color: #000000;
+      @include bold;
+    }
+
+    &-first {
+      @include bold;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 74%;
+    }
+
+    &__row {
+      flex-basis: 33.33%;
+    }
+
+    &__option {
+      display: flex;
+      align-items: center;
+
+      &-sm {
+        max-width: 89px;
+      }
+
+      &-md {
+        max-width: 184px;
+      }
+
+      &-wrap {
+        display: flex;
+        align-items: center;
+      }
+
+      &-title {
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-right: 7px;
+
+        &__capitalize {
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    label {
+      margin-right: 32px;
+
+      .css-checkbox {
+        @include css-checkbox(20px, $selectedColor: #d11515);
+      }
+    }
+  }
+}
+
+.select {
+  height: 27px;
+  width: 100%;
+  border-bottom: 2px solid #dbdcdd;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+    right: 1px;
+    width: 9px;
+    height: 6px;
+    background: url(/build/img/arrow-down.png) 100% no-repeat transparent;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &_checked {
+    line-height: 28px;
+    padding-right: 56px;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 29px;
+    width: 97%;
+    background-color: #fff;
+    border: 1px solid #c1c1be;
+    margin: 0;
+    list-style: none;
+    padding: 18px 0 20px;
+    display: none;
+    @include lightit;
+    color: #c2c2c2;
+    text-align: left;
+
+    &_open {
+      display: block;
+    }
+  }
+
+  &__option {
+    margin-bottom: 20px;
+    padding-left: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: #6a6a6a;
+    }
+  }
+}

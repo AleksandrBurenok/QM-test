@@ -1,0 +1,19 @@
+body {
+  @include regular;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  @include bold;
+  font-size: 30px;
+  margin: 0;
+}
+
+.main {
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+}

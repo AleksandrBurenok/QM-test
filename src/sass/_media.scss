@@ -1,0 +1,74 @@
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 720px) {
+  .project {
+    &__blocks-wrap {
+      flex-direction: column;
+    }
+
+    &__block {
+      margin-bottom: 20px;
+      margin-right: 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    .sort {
+      &__wrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .project {
+    .sort {
+      &__option {
+        &-title {
+          font-size: 12px;
+        }
+      }
+
+      label {
+        margin-right: 10px;
+      }
+    }
+
+    &__form {
+      &-all__wrapper {
+        flex-direction: column;
+      }
+
+      &-wrap {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 100%;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      &-buttons {
+        flex-direction: column;
+      }
+
+      &-btn__cancel {
+        margin: 0 0 20px;
+      }
+    }
+
+    &__add {
+      &-title {
+        text-align: center;
+      }
+    }
+  }
+}
